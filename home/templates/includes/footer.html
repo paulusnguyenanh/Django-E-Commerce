@@ -1,0 +1,111 @@
+{% load static %}
+{% load i18n %}
+{% load currency %}
+	<!-- FOOTER -->
+	<footer id="footer" class="section section-grey">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<!-- footer widget -->
+				<div class="col-md-3 col-sm-6 col-xs-6">
+					<div class="footer">
+						<!-- footer logo -->
+						<div class="footer-logo">
+							<a class="logo" href="#">
+		            <img src="{% static '' %}img/online-shop-logo.jpg" alt="">
+		          </a>
+						</div>
+						<!-- /footer logo -->
+
+						<p>{% trans "This is an electronics store. Please enjoy your shopping. We always provide the best products" %}</p>
+
+						<!-- footer social -->
+						<ul class="footer-social">
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+							<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+						</ul>
+						<!-- /footer social -->
+					</div>
+				</div>
+				<!-- /footer widget -->
+
+				<!-- footer widget -->
+				<div class="col-md-3 col-sm-6 col-xs-6">
+					<div class="footer">
+						<h3 class="footer-header">{% trans "My Account" %}</h3>
+						<ul class="list-links">
+							<li><a href="{% url 'user_index' %}"><i class="fa fa-user-o"></i> {% trans "My Account" %}</a></li>
+                            <li><a href="#"><i class="fa fa-heart-o"></i> {% trans "My Favorits" %}</a></li>
+                            <li><a href="{% url 'user_orders' %}"><i class="fa fa-exchange"></i> {% trans "My Orders " %}</a></li>
+                            <li><a href="{% url 'user_comments' %}"><i class="fa fa-check"></i> {% trans "My Comments" %}</a></li>
+                            <li><a href="{% url 'logout' %}"><i class="fa fa-unlock-alt"></i> {% trans "Logout" %}</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- /footer widget -->
+
+				<div class="clearfix visible-sm visible-xs"></div>
+
+				<!-- footer widget -->
+				<div class="col-md-3 col-sm-6 col-xs-6">
+					<div class="footer">
+						<h3 class="footer-header">{% trans "Customer Service" %}</h3>
+						<ul class="list-links">
+							 <li><a href="{% url 'faq' %}">{% trans "FAQ" %}</a></li>
+							<li><a href="{% url 'aboutus' %}">{% trans "About Us" %}</a></li>
+                            <li><a href="{% url 'contactus' %}">{% trans "Contact Us" %}</a></li>
+
+						</ul>
+					</div>
+				</div>
+				<!-- /footer widget -->
+
+				<!-- footer subscribe -->
+				<div class="col-md-3 col-sm-6 col-xs-6">
+					<div class="footer">
+						<h3 class="footer-header">{% trans "promotion" %}</h3>
+
+
+
+						<form method="post" action="{% url 'promotion' %}">
+                            {% csrf_token %}
+							<div class="form-group">
+								<input type="email" name="email" placeholder="Enter Email Address" required>
+							</div>
+							<button type="submit" class="btn btn-primary">Submit</button>
+						</form>
+					</div>
+				</div>
+				<!-- /footer subscribe -->
+			</div>
+			<!-- /row -->
+			<hr>
+			<!-- row -->
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<!-- footer copyright -->
+					<div class="footer-copyright">
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						Copyright &copy;<script>document.write(new Date().getFullYear());</script>  <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Anh Nguyen</a>
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					</div>
+					<!-- /footer copyright -->
+				</div>
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</footer>
+	<!-- /FOOTER -->
+
+	<!-- jQuery Plugins -->
+
+	<script src="{% static '' %}js/bootstrap.min.js"></script>
+	<script src="{% static '' %}js/slick.min.js"></script>
+	<script src="{% static '' %}js/nouislider.min.js"></script>
+	<script src="{% static '' %}js/jquery.zoom.min.js"></script>
+	<script src="{% static '' %}js/main.js"></script>
